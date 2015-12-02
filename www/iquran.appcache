@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2015-12-01:v1
+# 2015-12-03:v0.5.0
 
 # Explicitly cached entries
 css/md-icon.css
@@ -16,18 +16,18 @@ js/materialize.min.js
 dist/js/app.js
 img/logo-64.png
 
-http://iqurankareem.github.io/www/app/module/quran/template/reader.html
-http://iqurankareem.github.io/www/app/module/quran/template/trans.html
-http://iqurankareem.github.io/www/app/module/quran/template/note-detail.html
-http://iqurankareem.github.io/www/app/module/quran/template/note-list.html
-http://iqurankareem.github.io/www/app/module/quran/template/note.html
-http://iqurankareem.github.io/www/app/module/quran/template/highlight.html
-http://iqurankareem.github.io/www/app/module/quran/template/highlight-list.html
-http://iqurankareem.github.io/www/app/module/quran/template/bookmark.html
-http://iqurankareem.github.io/www/app/module/quran/template/bookmark-list.html
-http://iqurankareem.github.io/www/app/module/quran/template/label.html
-http://iqurankareem.github.io/www/app/module/quran/template/sura.html
-http://iqurankareem.github.io/www/app/module/quran/template/jiza.html
+app/module/quran/template/reader.html
+app/module/quran/template/trans.html
+app/module/quran/template/note-detail.html
+app/module/quran/template/note-list.html
+app/module/quran/template/note.html
+app/module/quran/template/highlight.html
+app/module/quran/template/highlight-list.html
+app/module/quran/template/bookmark.html
+app/module/quran/template/bookmark-list.html
+app/module/quran/template/label.html
+app/module/quran/template/sura.html
+app/module/quran/template/jiza.html
 
 # offline.html will be displayed if the user is offline
 FALLBACK:
