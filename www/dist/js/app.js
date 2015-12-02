@@ -1526,7 +1526,7 @@ angular.module('module.quran')
 .config(['$routeProvider', function($routeProvider) {
 
   $routeProvider.when('/quran/:sura/:aya', {
-    templateUrl: 'app/module/quran/template/reader.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/reader.html',
     controller: 'QuranController'
   });
 
