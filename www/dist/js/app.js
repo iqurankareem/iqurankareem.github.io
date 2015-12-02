@@ -169,7 +169,14 @@ angular.module('iQuran', [
   };
 })
 
-.config(['$routeProvider', function($routeProvider) {
+.config(['$routeProvider', '$sceDelegateProvider', function($routeProvider, $sceDelegateProvider) {
+
+  $sceDelegateProvider.resourceUrlWhitelist([
+    // Allow same origin resource loads.
+    'self',
+    // Allow loading from our assets domain.  Notice the difference between * and **.
+    'http://iqurankareem.github.io/**'
+  ]);
 
   $routeProvider.when('/', {redirectTo: '/quran'});
   // FIXME: move all configuration of quran module to quran's module, then create object extends configuration
