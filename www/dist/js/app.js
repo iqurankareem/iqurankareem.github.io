@@ -1462,16 +1462,19 @@ function HighlightListController($scope, quranService, $log, $q, $http, $routePa
         function(buttonIndex) {
           if(buttonIndex == 1) {
             // sura_name TEXT, sura INTEGER, aya INTEGER, aya_text TEXT, note_group TEXT, note TEXT, note_date TEXT
-            ActivityIndicator.show('Deleting highlight...');
+            // ActivityIndicator.show('Deleting highlight...');
             var
             sql = "DELETE FROM highlights WHERE id=?;",
             param = [id];
             appDb.query(sql, param, function(res) {
               window.plugins.toast.show('Highlight deleted!.', 'long', 'bottom');
-              $timeout(function(){
-                $location.path('/');
-                ActivityIndicator.hide();
-              }, 300);
+              for (var i in self.highlights) {
+                if (self.highlights[i].id == id) {
+                  self.highlights.splice(i, 1);
+                  self.$apply();
+                  break;
+                }
+              }
             });
           }
         },
