@@ -1143,7 +1143,7 @@ function BookmarkController($scope, quranService, $log, $q, $http, $routeParams,
 
   self.onSave = function() {
     // 'CREATE TABLE IF NOT EXISTS bookmarks  (id INTEGER PRIMARY KEY, sura_name TEXT, sura INTEGER, aya INTEGER, bookmark_date TEXT)',
-    ActivityIndicator.show('Saving bookmark...');
+    // ActivityIndicator.show('Saving bookmark...');
     var
     sql = "INSERT INTO bookmarks (sura_name, sura, aya, aya_text, bookmark_date) VALUES (?,?,?,?,?)",
     _date = new Date().toUTCString();
@@ -1164,7 +1164,7 @@ function BookmarkController($scope, quranService, $log, $q, $http, $routeParams,
 
     window.plugins.toast.show('Bookmark saved!.', 'long', 'bottom');
     $timeout(function(){
-      ActivityIndicator.hide();
+      // ActivityIndicator.hide();
       $location.path('/quran');
     }, 300);
 
@@ -1406,7 +1406,7 @@ function HighlightController($scope, quranService, $log, $q, $http, $routeParams
 
   self.onSave = function() {
     // 'CREATE TABLE IF NOT EXISTS highlights (id INTEGER PRIMARY KEY, sura_name TEXT, sura INTEGER, aya INTEGER, aya_text TEXT, color TEXT, highlight_date TEXT)'
-    ActivityIndicator.show('Saving highlight...');
+    // ActivityIndicator.show('Saving highlight...');
     var
     sql = "INSERT INTO highlights (sura_name, sura, aya, aya_text, color, highlight_date) VALUES (?,?,?,?,?,?)",
     _date = new Date().toUTCString();
@@ -1428,7 +1428,7 @@ function HighlightController($scope, quranService, $log, $q, $http, $routeParams
 
     window.plugins.toast.show('Highlight saved!.', 'long', 'bottom');
     $timeout(function(){
-      ActivityIndicator.hide();
+      // ActivityIndicator.hide();
       $location.path('/quran');
     }, 300);
 
