@@ -174,62 +174,62 @@ angular.module('iQuran', [
   $routeProvider.when('/', {redirectTo: '/quran'});
   // FIXME: move all configuration of quran module to quran's module, then create object extends configuration
   $routeProvider.when('/quran/:sura?/:aya?', {
-    templateUrl: 'app/module/quran/template/reader.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/reader.html',
     controller: 'QuranController'
   });
 
   $routeProvider.when('/trans', {
-    templateUrl: 'app/module/quran/template/trans.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/trans.html',
     controller: 'TransController'
   });
 
   $routeProvider.when('/note/detail/:id', {
-    templateUrl: 'app/module/quran/template/note-detail.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/note-detail.html',
     controller: 'NoteDetailController'
   });
 
   $routeProvider.when('/note/list', {
-    templateUrl: 'app/module/quran/template/note-list.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/note-list.html',
     controller: 'NotelistController'
   });
 
   $routeProvider.when('/note', {
-    templateUrl: 'app/module/quran/template/note.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/note.html',
     controller: 'NoteController'
   });
 
   $routeProvider.when('/highlight', {
-    templateUrl: 'app/module/quran/template/highlight.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/highlight.html',
     controller: 'HighlightController'
   });
 
   $routeProvider.when('/highlight/list', {
-    templateUrl: 'app/module/quran/template/highlight-list.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/highlight-list.html',
     controller: 'HighlightListController'
   });
 
   $routeProvider.when('/bookmark', {
-    templateUrl: 'app/module/quran/template/bookmark.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/bookmark.html',
     controller: 'BookmarkController'
   });
 
   $routeProvider.when('/bookmark/list', {
-    templateUrl: 'app/module/quran/template/bookmark-list.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/bookmark-list.html',
     controller: 'BookmarklistController'
   });
 
   $routeProvider.when('/label', {
-    templateUrl: 'app/module/quran/template/label.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/label.html',
     controller: 'LabelController'
   });
 
   $routeProvider.when('/sura', {
-    templateUrl: 'app/module/quran/template/sura.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/sura.html',
     controller: 'SuraController'
   });
 
   $routeProvider.when('/jiza', {
-    templateUrl: 'app/module/quran/template/jiza.html',
+    templateUrl: 'http://iqurankareem.github.io/www/app/module/quran/template/jiza.html',
     controller: 'JuzController'
   });
 
