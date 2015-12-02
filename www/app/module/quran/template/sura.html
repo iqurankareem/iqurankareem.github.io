@@ -1,0 +1,22 @@
+<div id="suraview" ng-cloak>
+
+  <div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#/" class="collapse-left teal-text text-lighten-2 margin-min-left-20" style="padding-top: 10px;"><ng-md-icon icon="arrow_back" size="30" style="fill:#4db6ac"></ng-md-icon></a>
+      <a id="logo-container" href="#/" class="teal-text text-lighten-2">Surah</a>
+    </div>
+  </nav>
+  </div>
+
+  <br/>
+
+  <div class="row" ng-repeat="sura in suras">
+    <a href="#/quran/{{sura.sura}}/1" class="black-text">
+    <div class="col s2">{{sura.type | suraType}}</div>
+    <div class="col s8">{{sura.sura}}. {{sura.ename}} ({{sura.tname}})</div>
+    <div class="col s2">{{sura.name}}</div>
+    </a>
+  </div>
+
+</div>

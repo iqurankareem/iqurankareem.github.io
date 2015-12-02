@@ -1,0 +1,28 @@
+<div id="juzview" ng-cloak>
+
+  <div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#/" class="collapse-left teal-text text-lighten-2 margin-min-left-20" style="padding-top: 10px;"><ng-md-icon icon="arrow_back" size="30" style="fill:#4db6ac"></ng-md-icon></a>
+      <a id="logo-container" href="#/" class="teal-text text-lighten-2">Ajiz'a</a>
+    </div>
+  </nav>
+  </div>
+
+  <ul class="collapsible" data-collapsible="expandable">
+
+    <li ng-repeat="jz in juz">
+      <div class="collapsible-header">{{jz.no}}. {{jz.name}} ({{jz.juz}})</div>
+      <div class="collapsible-body">
+      <br>
+          <div class="row" ng-repeat="sura in jz.suras">
+            <a href="#/quran/{{sura.sura.sura}}/{{sura.from}}" class="black-text">
+            <div class="col s3">{{sura.from}} - {{sura.to}}</div>
+            <div class="col s9">{{sura.sura.tname}} ({{sura.sura.name}})</div>
+            </a>
+          </div>
+      </div>
+    </li>
+
+  </ul>
+</div>

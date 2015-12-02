@@ -1,0 +1,103 @@
+<div id="noteview" ng-cloak>
+
+  <div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#/" class="collapse-left teal-text text-lighten-2 margin-min-left-20" style="padding-top: 10px;"><ng-md-icon icon="arrow_back" size="30" style="fill:#4db6ac"></ng-md-icon></a>
+      <a id="logo-container" href="#/" class="teal-text text-lighten-2">Highlight</a>
+      <a class="teal-text text-lighten-2 right" ng-click="onSave()" style="padding-top: 10px;"><ng-md-icon icon="done" size="30" style="fill:#4db6ac"></ng-md-icon></a>
+    </div>
+  </nav>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <form class="col s12">
+
+      <div class="row">
+        <div class="col s2">
+          <strong>{{suraName}}</strong>
+        </div>
+        <div class="col s10">
+          <strong>{{sura}}:{{stacks}}</strong>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s2">
+          <div class="card-panel red lighten-1" ng-click="pickColor('red lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel pink lighten-1" ng-click="pickColor('pink lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel purple lighten-1" ng-click="pickColor('purple lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel deep-purple lighten-1" ng-click="pickColor('deep-purple lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel indigo lighten-1" ng-click="pickColor('indigo lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel teal blue lighten-1" ng-click="pickColor('teal blue lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel light-blue lighten-1" ng-click="pickColor('light-blue lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel cyan lighten-1" ng-click="pickColor('cyan lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel teal lighten-1" ng-click="pickColor('teal lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel green lighten-1" ng-click="pickColor('green lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel light-green lighten-1" ng-click="pickColor('light-green lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel lime lighten-1" ng-click="pickColor('lime lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel yellow lighten-1" ng-click="pickColor('yellow lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel amber lighten-1" ng-click="pickColor('amber lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel orange lighten-1" ng-click="pickColor('orange lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel deep-orange lighten-1" ng-click="pickColor('deep-orange lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel brown lighten-1" ng-click="pickColor('brown lighten-1');">&nbsp;</div>
+        </div>
+        <div class="col s2">
+          <div class="card-panel grey lighten-1" ng-click="pickColor('grey lighten-1');">&nbsp;</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <div class="quranText" id="quranText" style="text-align: justify; font-family: Scheherazade, Scheheraza; font-size: 1.403em; font-weight: normal; display: block;">
+          <div id="ayasContainer" class="unselectable">
+            <span id="{{sura.sura}}-{{sura.aya}}" data-aya="{{sura.aya}}" ng-class="aya" ng-repeat="sura in ayas" class="aya">
+              <span class="aya-wrapper">
+                <span class="ayaText" ng-bind-html='sura.text | ayaSign'></span>
+                <span class="ayaNumber">
+                  ﴿<a>{{sura.aya | parseArabicNumber}}</a>﴾
+                </span>
+              </span>
+            </span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

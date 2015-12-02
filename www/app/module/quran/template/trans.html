@@ -1,0 +1,35 @@
+<div id="choiceview" ng-cloak>
+  <div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#/" class="collapse-left teal-text text-lighten-2 margin-min-left-20" style="padding-top: 10px;"><ng-md-icon icon="arrow_back" size="30" style="fill:#4db6ac"></ng-md-icon></a>
+      <a id="logo-container" href="#/" class="teal-text text-lighten-2">{{menuName}}</a>
+      <a class="teal-text text-lighten-2 right" ng-click="onSave()" style="padding-top: 10px;"><ng-md-icon icon="done" size="30" style="fill:#4db6ac"></ng-md-icon></a>
+    </div>
+  </nav>
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div id="translationContent" class="col s12">
+      <form action="#">
+        <!--
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">search</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Translation</label>
+          </div>
+        </div>
+        -->
+        <p ng-repeat="tr in trans">
+          <input name="trans" type="radio" id="trans-{{tr.id}}" ng-click="onClickTrans(tr.id)" value="{{tr.id}}" ng-checked="optionTrans == tr.id" />
+          <label for="trans-{{tr.id}}">{{tr.lang}}: {{tr.translator}}</label>
+        </p>
+      </form>
+    </div>
+
+  </div>
+</div>

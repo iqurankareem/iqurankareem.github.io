@@ -1,0 +1,56 @@
+<div id="noteview" ng-cloak>
+
+  <div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#/note/list" class="collapse-left teal-text text-lighten-2 margin-min-left-20">
+        <i class="material-icons">arrow_back</i>
+      </a>
+      <a id="logo-container" href="#/note/list" class="teal-text text-lighten-2">Note</a>
+      <a class="teal-text text-lighten-2 right" style="padding-top: 10px;margin-left: 25px;" ng-click="onSave()"><i class="material-icons">done</i></a>
+      <a class="teal-text text-lighten-2 right"  style="padding-top: 10px;" ng-click="onDelete()"><i class="material-icons">delete</i></a>
+    </div>
+  </nav>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <form class="col s12">
+
+      <div class="row">
+        <div class="col s2">
+          <strong>{{suraName}}</strong>
+        </div>
+        <div class="col s10">
+          <strong>{{sura}}:{{group}}</strong>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="noteContent" class="materialize-textarea" ng-model="note" required></textarea>
+          <label for="noteContent" class="active">Note Content</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <div class="quranText" id="quranText" style="text-align: justify; font-family: Scheherazade, Scheheraza; font-size: 1.403em; font-weight: normal; display: block;">
+          <div id="ayasContainer" class="unselectable">
+            <span id="{{sura.sura}}-{{sura.aya}}" data-aya="{{sura.aya}}" ng-class="aya" ng-repeat="sura in ayas" class="aya">
+              <span class="aya-wrapper">
+                <span class="ayaText" ng-bind-html='sura.text | ayaSign'></span>
+                <span class="ayaNumber">
+                  ﴿<a>{{sura.aya | parseArabicNumber}}</a>﴾
+                </span>
+              </span>
+            </span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,36 @@
+<div id="notelistview" ng-cloak>
+
+  <div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#/" class="collapse-left teal-text text-lighten-2 margin-min-left-20" style="padding-top: 10px;"><ng-md-icon icon="arrow_back" size="30" style="fill:#4db6ac"></ng-md-icon></a>
+      <a id="logo-container" href="#/" class="teal-text text-lighten-2">Your Bookmarks</a>
+
+      <!-- <a class="teal-text text-lighten-2 right" ng-click="onSave()" style="padding-top: 10px;"><ng-md-icon icon="done" size="30" style="fill:#4db6ac"></ng-md-icon></a> -->
+
+    </div>
+  </nav>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <!-- "INSERT INTO notes (sura_name, sura, aya, note_group, note, note_date) VALUES (?,?,?,?,?,?)" -->
+    <div class="col s12" ng-repeat="bm in bookmarks">
+      <div class="card">
+        <div class="card-content" ng-click="showBokmarkDetail(bm.id);">
+          <span class="teal-text text-lighten-2 quranFont" style="font-size: 20px;" ><span class="left">{{bm.sura_name}}</span> <span>{{bm.sura}}:{{bm.aya}}</span></span>
+          <p class="quranText">{{bm.aya_text}}</p>
+        </div>
+
+        <div class="card-action">
+          <a class="black-text right" ng-click="deleteBookmark(bm.id)"><i class="material-icons">delete</i></a>
+          <a class="black-text" href="#/quran/{{bm.sura}}/{{bm.aya}}"><i class="material-icons">remove_red_eye</i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
