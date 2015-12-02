@@ -1,0 +1,10 @@
+.tabIncatorTeal .indicator {background-color: #009688 !important}
+@font-face {font-family: 'Scheheraza';src: url('../font/Scheherazade.eot');src: local('Scheherazade'), url('../font/Scheherazade.ttf') format('truetype');}
+::-webkit-scrollbar{
+  width:0px;   // here actuall it exist but width is 0 so no one can see it
+  background:transparent;
+  display: none;
+}
+::-webkit-scrollbar-thumb{
+   background-color: rgba(0,0,0,0);
+}

@@ -1,0 +1,32 @@
+CACHE MANIFEST
+# 2015-12-01:v1
+
+# Explicitly cached entries
+css/md-icon.css
+css/materialize.css
+css/style.css
+css/helper.css
+css/tanzil(v1.5).css
+vendor/angular/angular-csp.css
+vendor/noUiSlider/nouislider.min.css
+
+cordova.js
+dist/js/babel.min.js
+js/materialize.min.js
+
+cordova.js
+dist/js/babel.min.js
+./js/materialize.min.js
+dist/js/app.js
+img/logo-64.png
+
+# offline.html will be displayed if the user is offline
+FALLBACK:
+
+
+# All other resources (e.g. sites) require the user to be online.
+NETWORK:
+*
+
+# Additional resources to cache
+CACHE:
